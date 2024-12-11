@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import icon1 from '@/public/images/icons/icon_bulb.svg'
 import icon2 from '@/public/images/icons/icon_user_rating.svg'
 import icon3 from '@/public/images/icons/icon_hand_shake.svg'
