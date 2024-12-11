@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link'
 import about1 from '@/public/images/about/home-about-1.jpg'
 import Image from 'next/image'
