@@ -31,7 +31,7 @@ const TeamSection = () => {
 
     return (
 
-        <section className="team_section xb-hidden section_space">
+        <section className="team_section xb-hidden section_space_1">
             <div className="container">
                 <div className="heading_block text-center">
                     <h2 className="heading_text mb-0">
