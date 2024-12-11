@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import shape1 from '../../../public/images/shapes/shape_space_4.svg'
-import shape2 from '../../../public/images/shapes/shape_angle_3.webp'
+import shape1 from '@/public/images/shapes/shape_space_4.svg'
+import shape2 from '@/public/images/shapes/shape_angle_3.webp'
 import Image from 'next/image';
 
 const faqs = [{
