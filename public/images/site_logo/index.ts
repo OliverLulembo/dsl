@@ -1,0 +1,1 @@
+//export {default as logo} from "./site_logo_2.svg"
