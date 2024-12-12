@@ -9,6 +9,12 @@ body{
     @media screen and (max-width: 996px){
         width: 16.67%;
     }
+    @media screen and (max-width: 767px) {
+        width: 33.3%
+    }
+    @media screen and (max-width: 575px) {
+        width: 50%
+    }
 }
 
 .col-2{
@@ -16,6 +22,12 @@ body{
     display: inline-grid;
     @media screen and (max-width: 996px){
         width: 33.3%;
+    }
+    @media screen and (max-width: 767px) {
+        width: 50%
+    }
+    @media screen and (max-width: 575px) {
+        width: 100%
     }
 }
 
@@ -25,6 +37,9 @@ body{
     @media screen and (max-width: 996px){
         width: 50%;
     }
+    @media screen and (max-width: 767px) {
+        width: 100%
+    }
 }
 
 .col-4{
@@ -32,6 +47,9 @@ body{
     display: inline-grid;
     @media screen and (max-width: 996px){
         width: 66.67%;
+    }
+    @media screen and (max-width: 767px) {
+        width: 100%
     }
 }
 .col-5{
@@ -52,22 +70,37 @@ body{
 .col-7{
     display: inline-grid;
     width: 58.3%;
+    @media screen and (max-width: 996px){
+        width: 100%;
+    }
 }
 .col-8{
     display: inline-grid;
     width: 66.67%;
+    @media screen and (max-width: 996px){
+        width: 100%;
+    }
 }
 .col-9{
     display: inline-grid;
     width: 75%;
+    @media screen and (max-width: 996px){
+        width: 100%;
+    }
 }
 .col-10{
     display: inline-grid;
     width: 83.3%;
+    @media screen and (max-width: 996px){
+        width: 100%;
+    }
 }
 .col-11{
     display: inline-grid;
     width: 91.67%;
+    @media screen and (max-width: 996px){
+        width: 100%;
+    }
 }
 .col-12{
     display: inline-grid;
@@ -174,6 +207,8 @@ body{
 
 .row{
     display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mobile_menu_btn{

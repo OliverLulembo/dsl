@@ -178,6 +178,8 @@ Responsive For Mobile & Tablet Devices
 		>.row {
 			width: 100%;
 			margin: -30px;
+			display: contents;
+			align-items: center;
 			
 			>.col-3{
 				width: 25%;
@@ -1135,7 +1137,7 @@ Responsive For Mobile & Tablet Devices
 		top: 155px;
 	}
 	.site_header_1 + main {
-		padding-top: 155px;
+		padding-top: 15px;
 	}
 }
 /* Media Screen 575px - End

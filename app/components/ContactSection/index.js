@@ -10,7 +10,8 @@ const ContactSection = () => {
     return (
         <section className="contact_section section_space bg-light">
             <div className="container">
-                <div className="contact_info_box row">
+                <div className="contact_info_box">
+                    <div className='row'>
                     <div className="col-3">
                         <div className="iconbox_block text-center">
                             <div className="iconbox_icon">
@@ -64,9 +65,11 @@ const ContactSection = () => {
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div className="section_space pb-0">
                     <div className="top-row justify-content-lg-between">
+                        <div className='row'>
                         <div className="col-7">
                             <div className="contact_form mb-0">
                                 <h3 className="details_item_info_title mb-1">Send Us A Message</h3>
@@ -81,6 +84,7 @@ const ContactSection = () => {
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.279707910131!2d28.34861447488982!3d-15.415447585173304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408dc0d00ef89f%3A0x5e672c902b9cc2ef!2sDigital%20Safe%20Limited!5e0!3m2!1sen!2szm!4v1733746282617!5m2!1sen!2szm" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
                                 {/* <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.279707910131!2d28.34861447488982!3d-15.415447585173304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19408dc0d00ef89f%3A0x5e672c902b9cc2ef!2sDigital%20Safe%20Limited!5e0!3m2!1sen!2szm!4v1733746282617!5m2!1sen!2szm"></iframe> */}
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
