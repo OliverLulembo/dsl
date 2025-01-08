@@ -18,9 +18,9 @@ const TeamSection = () => {
         return null;
     }
 
-    const ClickHandler = () => {
-        window.scrollTo(10, 0);
-    };
+    // const ClickHandler = () => {
+    //     window.scrollTo(10, 0);
+    // };
 
     const displayedTeams = Teams && Teams.length > 0 ? Teams.slice(0, 5) : [];
 

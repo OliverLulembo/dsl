@@ -36,7 +36,7 @@ const FunFact = [
 ]
 
 
-const Methodology = (props) => {
+const Methodology = () => {
 
     return (
         <section className="client_logo_section section_space methodology" style={{ backgroundImage: `url(${'/images/shapes/bg_pattern_1.svg'})` }}>

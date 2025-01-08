@@ -9,7 +9,7 @@ import srImg from '@/public/images/services/1.jpg'
 import ServiceSection from '../components/ServiceSection/ServiceSection';
 import Testimonial from '../components/Testimonial/Testimonial';
 import Image from 'next/image';
-import FaqSection from '../components/software-company-components/FaqSection/FaqSection';
+//import FaqSection from '../components/software-company-components/FaqSection/FaqSection';
 import ContactSection from '../components/software-company-components/ContactSection';
 
 

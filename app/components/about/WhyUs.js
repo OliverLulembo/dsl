@@ -3,7 +3,7 @@ import wImg from '@/public/images/about/1.jpg'
 import sIcon1 from '@/public/images/icons/icon_check_2.svg'
 import sIcon2 from '@/public/images/icons/icon_leaf.svg'
 import sIcon3 from '@/public/images/icons/icon_box.svg'
-import sIcon4 from '@/public/images/icons/icon_receipt_add.svg'
+//import sIcon4 from '@/public/images/icons/icon_receipt_add.svg'
 import sIcon5 from '@/public/images/icons/icon_monitor.svg'
 import Image from 'next/image';
 
