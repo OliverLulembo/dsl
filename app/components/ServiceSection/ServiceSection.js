@@ -18,7 +18,7 @@ const ServiceSection = () => {
                 </div>
 
                 <div className="row">
-                    {Services.slice(0, 8).map((service, srv) => (
+                    {Services.slice(0, 9).map((service, srv) => (
                         <div className={`${service.col} mt-30`} key={srv}>
                             {service.title ?
                                 <div className="service_block">

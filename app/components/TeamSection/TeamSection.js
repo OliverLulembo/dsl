@@ -4,11 +4,6 @@ import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import sImg1 from '@/public/images/icons/icon_facebook.svg'
-import sImg2 from '@/public/images/icons/icon_twitter_x.svg'
-import sImg3 from '@/public/images/icons/icon_linkedin.svg'
-import sImg4 from '@/public/images/icons/icon_instagram.svg'
-import Image from 'next/image';
 
 
 const TeamSection = () => {
@@ -60,38 +55,19 @@ const TeamSection = () => {
                             <SwiperSlide key={team.Id}>
                                 <div className="team_block">
                                     <div className="team_member_image">
-                                        <Link onClick={ClickHandler} className="image_wrap" aria-label="Team Details Button" href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
+                                    <h3 className="team_member_name">
+                                            {team.title}
+                                        </h3>
+                                        {/* <Link onClick={ClickHandler} className="image_wrap" aria-label="Team Details Button" href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
                                             <Image src={team.tImg} alt="" />
                                             <i className="fa-solid fa-arrow-up-right"></i>
-                                        </Link>
+                                        </Link> */}
+                                        <p>
+                                           {team.description} 
+                                        </p>
                                     </div>
                                     <div className="team_member_info">
-                                        <h3 className="team_member_name">
-                                            <Link onClick={ClickHandler} href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>{team.name}</Link>
-                                        </h3>
-                                        <h4 className="team_member_designation">{team.title}</h4>
-                                        <ul className="social_icons_block unordered_list justify-content-center">
-                                            <li>
-                                                <Link onClick={ClickHandler} href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
-                                                    <Image src={sImg1} alt="Icon Facebook" />
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link onClick={ClickHandler} href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
-                                                    <Image src={sImg2} alt="Icon Twitter X" />
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link onClick={ClickHandler} href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
-                                                    <Image src={sImg3} alt="Icon Linkedin" />
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link onClick={ClickHandler} href={'/team-single/[slug]'} as={`/team-single/${team.slug}`}>
-                                                    <Image src={sImg4} alt="Icon Instagram" />
-                                                </Link>
-                                            </li>
-                                        </ul>
+                                      
                                     </div>
                                 </div>
                             </SwiperSlide>

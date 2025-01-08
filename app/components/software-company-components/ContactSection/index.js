@@ -33,7 +33,7 @@ const ContactSection = () => {
                                         <span className="icon">
                                             <i className="fa-solid fa-phone-volume"></i>
                                         </span>
-                                        <span className="text">+260-961-230-429</span>
+                                        <span className="text">+260 763 885564 / 763 885563</span>
                                     </a>
                                 </li>
                                 <li>
@@ -41,7 +41,7 @@ const ContactSection = () => {
                                         <span className="icon">
                                             <i className="fa-solid fa-envelope"></i>
                                         </span>
-                                        <span className="text">info@digitalsafelimited.com</span>
+                                        <span className="text">info@digitalsafezm.com</span>
                                     </a>
                                 </li>
                                 <li>
@@ -49,7 +49,7 @@ const ContactSection = () => {
                                         <span className="icon">
                                             <i className="fa-solid fa-location-dot"></i>
                                         </span>
-                                        <span className="text">Reedbuck Rd, Kabulonga, Lusaka</span>
+                                        <span className="text">No.11 Reedbuck Rd, Kabulonga, Lusaka</span>
                                     </a>
                                 </li>
                             </ul>

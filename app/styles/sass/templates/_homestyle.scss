@@ -7,7 +7,7 @@ body{
     width: 8.3%;
     display: inline-grid;
     @media screen and (max-width: 996px){
-        width: 16.67%;
+        width: 16.66%;
     }
     @media screen and (max-width: 767px) {
         width: 33.3%
@@ -18,7 +18,7 @@ body{
 }
 
 .col-2{
-    width: 16.67%;
+    width: 16.66%;
     display: inline-grid;
     @media screen and (max-width: 996px){
         width: 33.3%;
@@ -45,6 +45,7 @@ body{
 .col-4{
     width: 33.3%;
     display: inline-grid;
+    vertical-align: top;
     @media screen and (max-width: 996px){
         width: 66.67%;
     }
@@ -54,7 +55,8 @@ body{
 }
 .col-5{
     width: 41.67%;
-    display: inline-grid;
+    display: inline-block;
+    vertical-align: top;
     @media screen and (max-width: 996px){
         width: 91.67%;
     }
@@ -68,7 +70,8 @@ body{
     }
 }
 .col-7{
-    display: inline-grid;
+    display: inline-block;
+    vertical-align: top;
     width: 58.3%;
     @media screen and (max-width: 996px){
         width: 100%;
@@ -77,6 +80,7 @@ body{
 .col-8{
     display: inline-grid;
     width: 66.67%;
+    vertical-align: top;
     @media screen and (max-width: 996px){
         width: 100%;
     }
@@ -442,4 +446,14 @@ body{
 	}
 
 
+}
+
+.methodology{
+    width: 100%;
+    background-color: #FFF;
+    margin-bottom: 30px;
+}
+
+.methodology-inner{
+    padding: 30px;
 }

@@ -25,59 +25,24 @@ const About = () => {
                                 <div className="heading_focus_text">
                                     
                                 </div>
-                                <h2 className="heading_text">
-                                    Why Us
-                                </h2>
-                                <p className="heading_description mb-0">
-                                Digital Safe Ltd has adopted the 360° approach to Cybersecurity and ICT risk to ensure that an organization gains the required layers of security around Governance, 
-                                Technology, People and Processes. These layers of security are achieved through a systematic 
-                                understanding of the entity, its operating environment, regulatory requirements, threat landscape and internal attributes to come up with a tailored security 
-                                solution that can be matured from one capability level to the next in a consistent and simplified way while addressing the underlying risk factors. 
-                                We aim to balance Information Technology usability and security to ensure businesses get maximum value from their digital investments at minimal risk.
+                                <p className="">
+                                Digital Safe Limited is a trusted firm that specializes in providing advisory services for Digital
+                                transformation, end-to-end Information Security, cybersecurity, and risk management
+                                solutions tailored to meet the needs of our customers. We offer comprehensive IT
+                                Governance, Cybersecurity, Risk Management, and training programs that are designed to
+                                help our customers optimize their resources, protect their information, manage their digital
+                                reputation, comply with regulatory requirements, mitigate risks and consistently deliver
+                                business value to their stakeholders. </p>
+                                <br />
+                                <p className="">
+                                Our company is proudly Zambian-owned and recognized internationally for our
+                                approaches, skilled staff, and advanced technologies that are helping companies across
+                                various sectors worldwide preserve their business value, improve customer experience, and
+                                comply with regulatory requirements. At Digital Safe, we adopt a multi-phase approach
+                                that combines technology, staff training, policies, and secure business processes to
+                                manage risks at the source.
                                 </p>
                             </div>
-                            <ul className="icon_list unordered_list_block mb-5">
-                                <li>
-                                    <span className="icon_list_icon">
-                                        <i className="fa-solid fa-circle fa-fw"></i>
-                                    </span>
-                                    <span className="icon_list_text">
-                                        Local.
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="icon_list_icon">
-                                        <i className="fa-solid fa-circle fa-fw"></i>
-                                    </span>
-                                    <span className="icon_list_text">
-                                        Diverse.
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="icon_list_icon">
-                                        <i className="fa-solid fa-circle fa-fw"></i>
-                                    </span>
-                                    <span className="icon_list_text">
-                                        Customer Focused.
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="icon_list_icon">
-                                        <i className="fa-solid fa-circle fa-fw"></i>
-                                    </span>
-                                    <span className="icon_list_text">
-                                        Risk Focused.
-                                    </span>
-                                </li>
-                                <li>
-                                    <span className="icon_list_icon">
-                                        <i className="fa-solid fa-circle fa-fw"></i>
-                                    </span>
-                                    <span className="icon_list_text">
-                                        End to End.
-                                    </span>
-                                </li>
-                            </ul>
                             <ul className="btns_group unordered_list p-0 justify-content-start">
                                 <li>
                                     <Link onClick={ClickHandler} href="/pricing" className="btn">

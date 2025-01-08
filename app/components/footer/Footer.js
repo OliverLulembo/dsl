@@ -40,7 +40,7 @@ const Footer = () => {
                             <div className="iconbox_content">
                                 <h3 className="iconbox_title"> Call Us (Zambia)</h3>
                                 <p className="mb-0">
-                                    +(260) 961 230 429
+                                    +(260) 763 885564 / 763 885563
                                 </p>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                             <div className="iconbox_content">
                                 <h3 className="iconbox_title">Our Office</h3>
                                 <p className="mb-0">
-                                    Reedbuck Rd., Lusaka, Zambia
+                                    No.11 Reedbuck Rd., Lusaka, Zambia
                                 </p>
                             </div>
                         </div>
@@ -60,8 +60,8 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-3">
                                 <div className="footer_widget pe-md-3">
-                                    <h2 className="footer_info_title">Newsletter</h2>
-                                    <p>
+                                    <h2 className="footer_info_title">Socials</h2>
+                                    {/* <p>
                                         Sign up to Techco weekly newsletter to get the latest updates.
                                     </p>
                                     <form className="footer_newslatter" onSubmit={SubmitHandler}>
@@ -70,8 +70,8 @@ const Footer = () => {
                                         </label>
                                         <input id="footer_mail_input" type="email" name="email" placeholder="Enter your email" />
                                         <button type="submit"><i className="fa-solid fa-paper-plane"></i></button>
-                                    </form>
-                                    <ul className="social_links_block unordered_list">
+                                    </form> */}
+                                    <ul className="social_links_block unordered_list_block">
                                         <li><Link onClick={ClickHandler} href="/">Facebook</Link></li>
                                         <li><Link onClick={ClickHandler} href="/">Twitter</Link></li>
                                         <li><Link onClick={ClickHandler} href="/">Linkdin</Link></li>
@@ -82,7 +82,7 @@ const Footer = () => {
                                 <div className="footer_widget">
                                     <h3 className="footer_info_title">Services</h3>
                                     <ul className="icon_list unordered_list_block">
-                                        {Services.slice(0, 8).map((service, srv) => (
+                                        {Services.slice(0, 9).map((service, srv) => (
                                             <li key={srv}>
                                                 {service.title ?
                                                     <Link onClick={ClickHandler} href={'/service-single/[slug]'} as={`/service-single/${service.slug}`}>

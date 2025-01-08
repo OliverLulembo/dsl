@@ -7,6 +7,7 @@ import TeamSection from '../components/TeamSection/TeamSection';
 import WhyUs from '../components/about/WhyUs';
 import Footer from '../components/footer/Footer';
 import Testimonial from "../components/Testimonial/Testimonial";
+import Methodology from '../components/FeaturesSection/Methodology';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
          <main className="page_content">
             <AboutUsPage />
             <WhyUs />
+            <Methodology />
             <TeamSection />
             <EmpoweringSuccess />
             <Features />

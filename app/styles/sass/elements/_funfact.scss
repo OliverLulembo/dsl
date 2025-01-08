@@ -92,6 +92,10 @@
 	}
 }
 
+.mt-30{
+	margin-top: 30px;
+}
+
 .our_world_employees {
 	position: relative;
 	.image_wrap {
@@ -106,7 +110,7 @@
 			z-index: 1;
 			content: '';
 			position: absolute;
-			background: linear-gradient(0deg, var(--bs-primary), transparent 70%);
+			background: linear-gradient(0deg, var(--bs-primary), transparent 40%);
 		}
 	}
 	.content_wrap {

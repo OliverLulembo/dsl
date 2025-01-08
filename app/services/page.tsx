@@ -60,7 +60,7 @@ const ServicePage = () => {
                 <div className="pt-130"></div>
             </main>
             <Testimonial />
-            <FaqSection />
+            {/* <FaqSection /> */}
             <ContactSection />
             <Footer />
             <Scrollbar />
