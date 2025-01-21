@@ -43,6 +43,18 @@ export default function ServiceSignups() {
         },
         
     ]
+
+    interface ServiceRequest {
+        id: number,
+        name: string,
+        company: string,
+        email: string,
+        phone: string,
+        service: string,
+        message: string,
+        status: string,
+        created_at: Date,
+    }
     
     const [showTable, setShowTable] = useState(true);
     const [showSingleRequest, setShowSingleRequest] = useState(false);
@@ -63,7 +75,7 @@ export default function ServiceSignups() {
         setShowTable(true);
         setShowSingleRequest(false);
      }
-     function openRequest(serviceRequest){
+     function openRequest(serviceRequest: ServiceRequest){
         //setActiveRequest(requests?.filter((req) => req.id === serviceRequestId));
         setActiveRequest(serviceRequest.item);
         console.log(serviceRequest.item);
