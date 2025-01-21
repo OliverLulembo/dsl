@@ -107,7 +107,9 @@ export default function ServiceSignups() {
                     <span><Image src={eyeIcon} alt='View' onClick={() => openRequest({item})}/></span>
                 )
             default:
-                {cellValue}
+                return(
+                    <>{cellValue}</>
+                )
         }
      }, [])
     return(
