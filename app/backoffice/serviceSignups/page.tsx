@@ -91,7 +91,7 @@ export default function ServiceSignups() {
         setShowTable(false);
         setShowSingleRequest(true);
      }
-     const renderCell = useCallback((item: { [x: string]: any; status: string | number; }, columnkey: string | number) => {
+     const renderCell = useCallback((item: any , columnkey: string | number) => {
         const cellValue = item[columnkey]
 
         switch(columnkey){
