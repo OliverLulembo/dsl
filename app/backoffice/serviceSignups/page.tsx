@@ -1,6 +1,6 @@
 "use client"
 import {useEffect, useState, useCallback} from 'react';
-import {getServiceSignups, updateServiceRequestStatus} from '../../api/serviceSignup.js';
+import {getServiceSignups, updateServiceRequestStatus} from '../../api/serviceSignup.ts';
 import TopHeader from '../components/topHeader';
 import LeftNavigation from '../components/leftNavigation';
 import eyeIcon from '@/public/images/icons/icon_eye.svg';
@@ -14,7 +14,9 @@ import {
     TableCell
 } from '@nextui-org/table';
 import { revalidatePath } from 'next/cache.js';
+import { ServiceRequest } from '../../api/serviceSignup.ts';
 
+interface Props { serviceRequest: ServiceRequest; }
 export default function ServiceSignups() {
     const columns = [
         {   
@@ -44,20 +46,6 @@ export default function ServiceSignups() {
         
     ]
 
-    interface ServiceRequest {
-        item: {
-            id: number,
-            name: string,
-            company: string,
-            email: string,
-            phone: string,
-            service: string,
-            message: string,
-            status: string,
-            created_at: Date,
-        }
-    }
-
     interface TableItem { id: number; name: string; company: string; email: string; phone: string; service: string; message: string; status: 'new' | 'spam' | 'actioned'; created_at: Date; }
 
     interface statusMap {
@@ -68,8 +56,8 @@ export default function ServiceSignups() {
     
     const [showTable, setShowTable] = useState(true);
     const [showSingleRequest, setShowSingleRequest] = useState(false);
-    const [requests, setRequests] = useState([]);
-    const [activeRequest, setActiveRequest] = useState({});
+    const [requests, setRequests] = useState<TableItem[]>([]);
+    const [activeRequest, setActiveRequest] = useState<ServiceRequest | null>(null);
     useEffect(() => {async function getItems() {
             setRequests(await getServiceSignups().then());
             }
@@ -88,8 +76,8 @@ export default function ServiceSignups() {
      
      function openRequest(serviceRequest: ServiceRequest){
         //setActiveRequest(requests?.filter((req) => req.id === serviceRequestId));
-        setActiveRequest(serviceRequest.item);
-        console.log(serviceRequest.item);
+        setActiveRequest(serviceRequest);
+        console.log(serviceRequest);
         setShowTable(false);
         setShowSingleRequest(true);
      }
@@ -127,7 +115,7 @@ export default function ServiceSignups() {
                 )
             case 'id':
                 return(
-                    <span><Image src={eyeIcon} alt='View' onClick={() => openRequest({item})}/></span>
+                    <span><Image src={eyeIcon} alt='View' onClick={() => openRequest(item)}/></span>
                 )
             default:
                 return(
@@ -155,11 +143,13 @@ export default function ServiceSignups() {
                                 <TableBody items={requests} emptyContent={"No requests to display"}>
                                     {(item) => 
                                         <TableRow key={item.id}>
-                                            {(columnkey) => <TableCell>{renderCell(item, columnkey)}</TableCell>}
+                                            {Object.keys(item).map(key => 
+                                                <TableCell>{renderCell(item, key as keyof TableItem)}</TableCell>
+                                            )}
                                         </TableRow>}
                                 </TableBody>
                             </Table>)
-                            }{showSingleRequest && (<ViewServiceRequest serviceRequest={activeRequest}/>)}
+                            }{showSingleRequest && (activeRequest ? <ViewServiceRequest serviceRequest={activeRequest}/> : <></> )}
                             
                         </div>
                         
@@ -170,7 +160,7 @@ export default function ServiceSignups() {
     )
 }
 
-function ViewServiceRequest({ serviceRequest }){
+const ViewServiceRequest : React.FC<Props> = ({ serviceRequest }) => {
 
     async function changeStatus(sta: string){
         console.log(sta);
