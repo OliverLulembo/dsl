@@ -57,6 +57,12 @@ export default function ServiceSignups() {
             created_at: Date,
         }
     }
+
+    interface statusMap {
+        new: string,
+        actioned: string,
+        spam: string,
+    }
     
     const [showTable, setShowTable] = useState(true);
     const [showSingleRequest, setShowSingleRequest] = useState(false);
@@ -77,6 +83,7 @@ export default function ServiceSignups() {
         setShowTable(true);
         setShowSingleRequest(false);
      }
+     
      function openRequest(serviceRequest: ServiceRequest){
         //setActiveRequest(requests?.filter((req) => req.id === serviceRequestId));
         setActiveRequest(serviceRequest.item);
@@ -84,7 +91,7 @@ export default function ServiceSignups() {
         setShowTable(false);
         setShowSingleRequest(true);
      }
-     const renderCell = useCallback((item, columnkey) => {
+     const renderCell = useCallback((item: { [x: string]: any; status: string | number; }, columnkey: string | number) => {
         const cellValue = item[columnkey]
 
         switch(columnkey){
@@ -163,7 +170,7 @@ export default function ServiceSignups() {
 
 function ViewServiceRequest({ serviceRequest }){
 
-    async function changeStatus(sta){
+    async function changeStatus(sta: string){
         console.log(sta);
         console.log(serviceRequest.id);
         const result = await updateServiceRequestStatus(serviceRequest.id, sta)
