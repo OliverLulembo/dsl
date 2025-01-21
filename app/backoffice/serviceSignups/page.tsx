@@ -45,16 +45,17 @@ export default function ServiceSignups() {
     ]
 
     interface ServiceRequest {
-        // id: number,
-        // name: string,
-        // company: string,
-        // email: string,
-        // phone: string,
-        // service: string,
-        // message: string,
-        // status: string,
-        // created_at: Date,
-        item: {}
+        item: {
+            id: number,
+            name: string,
+            company: string,
+            email: string,
+            phone: string,
+            service: string,
+            message: string,
+            status: string,
+            created_at: Date,
+        }
     }
     
     const [showTable, setShowTable] = useState(true);
