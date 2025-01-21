@@ -13,7 +13,7 @@ const Services = [
     {
         Id: '1',
         sImg:sImg1,
-        title: 'Security Awareness Testing',
+        title: 'Security Awareness Training',
         slug: 'IT-Management-Services',
         thumb1:'Strategy',
         thumb2:'Consultation',

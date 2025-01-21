@@ -12,6 +12,13 @@ Responsive For Mobile & Tablet Devices
 
 /* Media Screen 1440px - Start
 ================================================== */
+#layout-wrapper {
+	background-color: #f0f0f0;;
+	max-width: 100%;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
 @media screen and (max-width: 1560px) {
 	.main_menu_list {
 		gap: 20px;

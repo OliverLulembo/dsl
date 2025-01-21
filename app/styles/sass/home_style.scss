@@ -105,6 +105,8 @@
 @import 'components/review';
 @import 'components/service';
 @import 'components/team';
+@import '../backofficeStyles/scss/custom/components/card';
+@import '../backofficeStyles/scss/custom/components/badge';
 
 // Template Pages
 @import 'templates/about';
@@ -113,6 +115,7 @@
 @import 'templates/home';
 @import 'templates/pricing';
 @import 'templates/homestyle';
+@import 'templates/backoffice';
 
 // Template Responsive For Small Devices
 @import 'responsive';

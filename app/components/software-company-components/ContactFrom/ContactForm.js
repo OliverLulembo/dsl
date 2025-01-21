@@ -1,5 +1,7 @@
 import Services from '@/app/api/service';
+import { signupForService } from '@/app/api/serviceSignup';
 import React, { useState } from 'react'
+import { useFormStatus } from 'react-dom';
 import SimpleReactValidator from 'simple-react-validator';
 
 const ContactForm = () => {
@@ -28,14 +30,9 @@ const ContactForm = () => {
         e.preventDefault();
         if (validator.allValid()) {
             validator.hideMessages();
-            setForms({
-                name: '',
-                email: '',
-                company: '',
-                phone: '',
-                service: '',
-                message: ''
-            })
+            signupForService(forms)
+            //console.log(forms)
+            //const res = fetch()
         } else {
             validator.showMessages();
         }
@@ -44,7 +41,7 @@ const ContactForm = () => {
     return (
 
 
-        <form className="xb-item--form contact-from" onSubmit={(e) => submitHandler(e)}>
+        <form className="xb-item--form contact-from" action={signupForService} >
             <div className="row">
                 <div className="col-6">
                     <div className="form-group">
@@ -115,8 +112,8 @@ const ContactForm = () => {
                         <label className="input_title" htmlFor="input_company">
                             What service are you interested in?
                         </label>
-                        <select className='form-select'>
-                            {Services.map((service, i) => (<option key={i} value={service.Id}> {service.title} </option>) )}
+                        <select className='form-select' name='service' onChange={(e) => changeHandler(e)}>
+                            {Services.map((service, i) => (<option key={i} value={service.title}> {service.title} </option>) )}
                         </select>
                         {validator.message('service', forms.service, 'required')}
                     </div>
@@ -137,12 +134,7 @@ const ContactForm = () => {
                         </textarea>
                         {validator.message('message', forms.message, 'required')}
                     </div>
-                    <button type="submit" className="btn btn-primary">
-                        <span className="btn_label" data-text="Send Request">Send Request</span>
-                        <span className="btn_icon">
-                            <i className="fa-solid fa-arrow-up-right"></i>
-                        </span>
-                    </button>
+                    <SignUpButton />
                 </div>
             </div>
         </form>
@@ -150,3 +142,19 @@ const ContactForm = () => {
 }
 
 export default ContactForm;
+
+export function SignUpButton(){
+    const {pending} = useFormStatus()
+    console.log(pending);
+    return(
+        <>
+            <button disabled={pending} type="submit" className="btn btn-primary">
+                {pending ? <span className="btn_label" data-text="Sending...">Sending...</span> : <span className="btn_label" data-text="Send Request">Send Request</span>}
+                <span className="btn_icon">
+                    <i className="fa-solid fa-arrow-up-right"></i>
+                </span>
+            </button>
+        </>
+    )
+}
+    

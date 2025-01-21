@@ -78,7 +78,7 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-9">
+                            <div className="col-6">
                                 <div className="footer_widget">
                                     <h3 className="footer_info_title">Services</h3>
                                     <ul className="icon_list unordered_list_block">
@@ -96,104 +96,21 @@ const Footer = () => {
                                     </ul>
                                 </div>
                             </div>
-                            {/* <div className="col-3">
+                            <div className="col-3">
                                 <div className="footer_widget">
-                                    <h3 className="footer_info_title">Information</h3>
+                                    <h3 className="footer_info_title">Other Links</h3>
                                     <ul className="icon_list unordered_list_block">
                                         <li>
-                                            <Link onClick={ClickHandler} href="/about">
+                                            <Link onClick={ClickHandler} href="/backoffice">
                                                 <span className="icon_list_text">
-                                                    About Techco
+                                                    Staff Login
                                                 </span>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/service">
-                                                <span className="icon_list_text">
-                                                    Investors
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/contact">
-                                                <span className="icon_list_text">
-                                                    Contact
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/about">
-                                                <span className="icon_list_text">
-                                                    Affiliate Program
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/portfolio">
-                                                <span className="icon_list_text">
-                                                    Career
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/pricing">
-                                                <span className="icon_list_text">
-                                                    Pricing Plan
-                                                </span>
-                                            </Link>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-3">
-                                <div className="footer_widget">
-                                    <h3 className="footer_info_title">Product</h3>
-                                    <ul className="icon_list unordered_list_block">
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/portfolio">
-                                                <span className="icon_list_text">
-                                                    Case Studies
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/pricing">
-                                                <span className="icon_list_text">
-                                                    Our Pricing
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/service">
-                                                <span className="icon_list_text">
-                                                    Features
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/about">
-                                                <span className="icon_list_text">
-                                                    Overview
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/blog">
-                                                <span className="icon_list_text">
-                                                    New Releases
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link onClick={ClickHandler} href="/pricing">
-                                                <span className="icon_list_text">
-                                                    Solutions
-                                                </span>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> */}
                         </div>
                     </div>
                 </div>
