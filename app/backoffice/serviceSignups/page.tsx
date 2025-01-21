@@ -58,6 +58,8 @@ export default function ServiceSignups() {
         }
     }
 
+    interface TableItem { id: number; name: string; company: string; email: string; phone: string; service: string; message: string; status: 'new' | 'spam' | 'actioned'; created_at: Date; }
+
     interface statusMap {
         new: string,
         actioned: string,
@@ -91,37 +93,37 @@ export default function ServiceSignups() {
         setShowTable(false);
         setShowSingleRequest(true);
      }
-     const renderCell = useCallback((item: any , columnkey: string | number) => {
+     const renderCell = useCallback((item : TableItem , columnkey: keyof TableItem) => {
         const cellValue = item[columnkey]
 
         switch(columnkey){
             case 'name':
                 return(
-                    <>{cellValue}
-                    </>
+                    <span>{item['name']}
+                    </span>
                 )
             case 'email':
                 return(
-                    <>{cellValue}
+                    <>{item['email']}
                     </>
                 )
             case 'created_at':
                 return(
-                    <>{cellValue}
+                    <>{new Date(cellValue as Date).toLocaleDateString()}
                     </>
                 )
             case 'status':
                 return(
-                    <span className={statusMap[item.status]}>{cellValue}
+                    <span className={statusMap[item.status]}>{item['status']}
                     </span>
                 )
             case 'company':
                 return(
-                    <>{cellValue}</>
+                    <>{item['company']}</>
                 )
             case 'service':
                 return(
-                    <>{cellValue}</>
+                    <>{item['service']}</>
                 )
             case 'id':
                 return(
@@ -129,7 +131,7 @@ export default function ServiceSignups() {
                 )
             default:
                 return(
-                    <>{cellValue}</>
+                    <>{item[columnkey]}</>
                 )
         }
      }, [])
