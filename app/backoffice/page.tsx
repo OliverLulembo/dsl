@@ -1,7 +1,7 @@
 "use client"
 import TopHeader from './components/topHeader';
 import LeftNavigation from './components/leftNavigation';
-import Footer from '../components/footer/Footer';
+//import Footer from '../components/footer/Footer';
 export default function Home() {
   return (
     <>

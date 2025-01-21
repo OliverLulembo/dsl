@@ -11,8 +11,7 @@ import {
     TableColumn,
     TableRow,
     TableBody,
-    TableCell,
-    getKeyValue
+    TableCell
 } from '@nextui-org/table';
 import { revalidatePath } from 'next/cache.js';
 

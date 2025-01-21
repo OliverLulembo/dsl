@@ -26,17 +26,17 @@ const ContactForm = () => {
         }
     };
 
-    const submitHandler = e => {
-        e.preventDefault();
-        if (validator.allValid()) {
-            validator.hideMessages();
-            signupForService(forms)
-            //console.log(forms)
-            //const res = fetch()
-        } else {
-            validator.showMessages();
-        }
-    };
+    // const submitHandler = e => {
+    //     e.preventDefault();
+    //     if (validator.allValid()) {
+    //         validator.hideMessages();
+    //         signupForService(forms)
+    //         //console.log(forms)
+    //         //const res = fetch()
+    //     } else {
+    //         validator.showMessages();
+    //     }
+    // };
 
     return (
 
