@@ -144,7 +144,7 @@ export default function ServiceSignups() {
                                     {(item) => 
                                         <TableRow key={item.id}>
                                             {Object.keys(item).map(key => 
-                                                <TableCell>{renderCell(item, key as keyof TableItem)}</TableCell>
+                                                <TableCell key={`${item.id}`}>{renderCell(item, key as keyof TableItem)}</TableCell>
                                             )}
                                         </TableRow>}
                                 </TableBody>
