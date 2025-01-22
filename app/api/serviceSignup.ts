@@ -34,7 +34,7 @@ export async function signupForService(formData : FormData){
     return data
 }
 
-export async function updateServiceRequestStatus(regId, Regstatus){
+export async function updateServiceRequestStatus(regId : number , Regstatus : string){
     
     const status = {status : Regstatus};
     console.log(regId)
