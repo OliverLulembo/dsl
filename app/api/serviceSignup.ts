@@ -2,18 +2,17 @@
 import {supabase} from './supabase';
 
 export async function getServiceSignups() {
-    let { data: ServiceRegistrations, error } = await supabase
+    const { data, error } = await supabase
     .from('ServiceRegistrations')
     .select('*')
     .range(0, 9)
     if(error){
         throw new Error(error.message)
     }
-    console.log(ServiceRegistrations)
-    return ServiceRegistrations    
+    return data    
 } 
 
-export async function signupForService(formData){
+export async function signupForService(formData : FormData){
     
     const name = formData.get('name');
     const email = formData.get('email');
