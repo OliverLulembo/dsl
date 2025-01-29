@@ -5,11 +5,13 @@ export async function getServiceSignups() {
     const { data, error } = await supabase
     .from('ServiceRegistrations')
     .select('*')
-    .range(0, 9)
     if(error){
+        console.log(error)
         throw new Error(error.message)
+        
     }
-    return data    
+    console.log(data)
+    return data   
 } 
 
 export async function signupForService(formData : FormData){
@@ -37,18 +39,18 @@ export async function signupForService(formData : FormData){
 export async function updateServiceRequestStatus(regId : number , Regstatus : string){
     
     const status = {status : Regstatus};
-    console.log(regId)
+    console.log(status)
     const { data, error } = await supabase
     .from('ServiceRegistrations')
     .update(status)
     .eq("id", regId)
+    .select()
     
     if(error){
         return error
         console.log(error)
     }
-    console.log('success')
-    return data    
+    return "Status successfully updated"    
 }
 
 export interface ServiceRequest {

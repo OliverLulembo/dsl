@@ -5,6 +5,7 @@ import "./styles/sass/home_style.scss";
 //import "../styles/sass/style.scss"
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import {Toaster} from 'react-hot-toast';
 config.autoAddCss = false
 
 const geistSans = localFont({
@@ -29,12 +30,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    
+      
+      <html lang="en">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Toaster position="bottom-center" />
+          {children}
+        </body>
+      </html>
+    
   );
 }
